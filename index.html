@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Formularz</title>
+</head>
+
+<body>
+    <div id="all">
+        <div class="przeslona">
+        </div>
+        <div id="resultPlace"></div>
+        <form action="php/contact.php" method="post">
+            <label for="mail">Twój e-mail:</label>
+            <!-- //wywaliem name i dziala -->
+            <input id="mail" autofocus>
+            <label for="subject">Temat wiadomości:</label>
+            <input name="subject" id="subject">
+            <label for="message">Treść wiadomości:</label>
+            <textarea name="message" id="message" cols="15" rows="5"></textarea>
+            <label for="Captched"></label>
+            <div id="Captched" class="g-recaptcha" data-sitekey="6Ld5n0QUAAAAAP1_4Sxns2Vn9h47gmOf7yD3EZ26" data-theme="dark"></div>
+            <button type="submit">Wyślij</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

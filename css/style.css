@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Open sans', sans-serif;
+}
+
+body {
+    color: whitesmoke;
+    background: url("../img/m-89724.jpeg") center/cover no-repeat;
+}
+
+#all {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.przeslona {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+form {
+    padding: 3rem;
+}
+
+form input, form textarea, form button {
+    width: 50%;
+    border: 1px solid whitesmoke;
+    border-radius: 0.5rem;
+    display: block;
+    padding: 1.4rem;
+    background-color: transparent;
+    color: whitesmoke;
+    font-size: 1.4rem;
+    transition: all 1s;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    background-color: rgba(0, 0, 0, .3);
+    outline: 0;
+}
+
+.alert {
+    width: 25%;
+    padding: .6rem;
+    border-radius: .4rem;
+}
+
+.alert-danger {
+    background-color: rgba(227, 48, 48, 0.6);
+}
+
+.alert-success {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    background-color: rgba(2, 46, 2, 0.65);
+}
+
+label {
+    display: block;
+    font-size: 1.4rem;
+}
+
+form textarea {
+    font-family: inherit;
+    resize: none;
+}
+
+form button {
+    margin-bottom: 3rem;
+    outline: 0;
+    width: 25%;
+}
+
+form button:hover {
+    background-color: rgba(245, 245, 245, 0.2);
+}
+
+form .g-recaptcha {
+    margin-top: 2rem;
+    margin-bottom:2rem;
+}
