@@ -2,7 +2,7 @@
 
 header('Content-type: application/json');
 
-class resultMail
+abstract class resultMail
 {
     protected $error;
     protected $mail;
@@ -24,12 +24,9 @@ class resultMail
         $this->s_mail = $s_mail;
         $this->error = $error;
         $this->headers;
-
     }
 
-}
-class funcMail extends resultMail
-{
+
     protected function index()
     {
         $this->error = [];
@@ -42,7 +39,7 @@ class funcMail extends resultMail
         $this->message = filter_var($this->message, FILTER_SANITIZE_STRING);
     }
 }
-class anotherFunc extends funcMail
+class anotherFunc extends resultMail
 {
     public function store()
     {
@@ -85,185 +82,7 @@ class anotherFunc extends funcMail
         }
     }
 
-    /**
-     * Get the value of error
-     */
-    public function getError()
-    {
-        return $this->error;
-    }
-
-    /**
-     * Set the value of error
-     *
-     * @return  self
-     */
-    public function setError($error)
-    {
-        $this->error = $error;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of mail
-     */
-    public function getMail()
-    {
-        return $this->mail;
-    }
-
-    /**
-     * Set the value of mail
-     *
-     * @return  self
-     */
-    public function setMail($mail)
-    {
-        $this->mail = $mail;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of subject
-     */
-    public function getSubject()
-    {
-        return $this->subject;
-    }
-
-    /**
-     * Set the value of subject
-     *
-     * @return  self
-     */
-    public function setSubject($subject)
-    {
-        $this->subject = $subject;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of message
-     */
-    public function getMessage()
-    {
-        return $this->message;
-    }
-
-    /**
-     * Set the value of message
-     *
-     * @return  self
-     */
-    public function setMessage($message)
-    {
-        $this->message = $message;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of to
-     */
-    public function getTo()
-    {
-        return $this->to;
-    }
-
-    /**
-     * Set the value of to
-     *
-     * @return  self
-     */
-    public function setTo($to)
-    {
-        $this->to = $to;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of htmlStarterStart
-     */
-    public function getHtmlStarterStart()
-    {
-        return $this->htmlStarterStart;
-    }
-
-    /**
-     * Set the value of htmlStarterStart
-     *
-     * @return  self
-     */
-    public function setHtmlStarterStart($htmlStarterStart)
-    {
-        $this->htmlStarterStart = $htmlStarterStart;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of htmlStarterEnd
-     */
-    public function getHtmlStarterEnd()
-    {
-        return $this->htmlStarterEnd;
-    }
-
-    /**
-     * Set the value of htmlStarterEnd
-     *
-     * @return  self
-     */
-    public function setHtmlStarterEnd($htmlStarterEnd)
-    {
-        $this->htmlStarterEnd = $htmlStarterEnd;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of s_mail
-     */
-    public function getS_mail()
-    {
-        return $this->s_mail;
-    }
-
-    /**
-     * Set the value of s_mail
-     *
-     * @return  self
-     */
-    public function setS_mail($s_mail)
-    {
-        $this->s_mail = $s_mail;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of headers
-     */
-    public function getHeaders()
-    {
-        return $this->headers;
-    }
-
-    /**
-     * Set the value of headers
-     *
-     * @return  self
-     */
-    public function setHeaders($headers)
-    {
-        $this->headers = $headers;
-
-        return $this;
-    }
+ 
 }
 
 $obj = new anotherFunc('', '', '', '', '', '', '', '', '');
@@ -278,3 +97,4 @@ echo $obj->store();
 // END;
 
 //json encode koduje tylko tablice i obiekty
+
