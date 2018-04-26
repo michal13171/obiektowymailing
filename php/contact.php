@@ -13,19 +13,6 @@ abstract class resultMail
     private $htmlStarterEnd;
     protected $s_mail;
     protected $headers;
-    public function __construct($s_mail, $to, $mail, $error, $subject, $htmlStarterStart, $htmlStarterEnd, $message, $headers)
-    {
-        $this->mail = $mail;
-        $this->subject = $subject;
-        $this->message = $message;
-        $this->to = $to;
-        $this->htmlStarterStart = $htmlStarterStart;
-        $this->htmlStarterEnd = $htmlStarterEnd;
-        $this->s_mail = $s_mail;
-        $this->error = $error;
-        $this->headers;
-    }
-
 
     protected function index()
     {
@@ -85,7 +72,7 @@ class anotherFunc extends resultMail
  
 }
 
-$obj = new anotherFunc('', '', '', '', '', '', '', '', '');
+$obj = new anotherFunc();
 echo $obj->store();
 //echo var_dump($error);
 //     echo <<<END
